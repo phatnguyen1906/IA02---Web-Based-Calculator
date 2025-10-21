@@ -142,7 +142,6 @@ npm run format:check
 ## 🏗️ Kiến trúc
 
 ### State Management
-- Sử dụng custom hook `useCalculator`
 - State machine pattern cho logic phức tạp
 - Immutable state updates
 
