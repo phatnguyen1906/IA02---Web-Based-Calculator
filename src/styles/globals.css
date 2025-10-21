@@ -1,0 +1,114 @@
+/* Global styles for the calculator app */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.calculator {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.calculator-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.calculator-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.calculator-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .calculator {
+    border-radius: 15px;
+  }
+  
+  .calculator-header {
+    padding: 15px;
+  }
+  
+  .calculator-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animation for button clicks */
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-clicked {
+  animation: buttonClick 0.1s ease-in-out;
+}
+
+/* Focus styles for accessibility */
+button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
